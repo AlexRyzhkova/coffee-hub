@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button {
+  color: white;
+  background: #cf9775;
+  font-size: 1.2rem;
+  border-radius: 100px 0 0 100px;
+  padding: 10px 15px;
+  border: none;
+  margin: 20px;
+}
+.minus {
+  border-radius: 100px 0 0 100px;
+}
+
+.plus {
+  border-radius: 0 100px 100px 0;
+}
+.output {
+  padding: 4px 5px;
+  flex-grow: 1;
+}
