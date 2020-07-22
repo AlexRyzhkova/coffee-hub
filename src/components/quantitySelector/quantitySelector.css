@@ -1,26 +1,38 @@
-.container {
+.selector-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: strech;
+  font-family: "Sen", sans-serif;
 }
 
-.button {
+.selector-container > p {
+  font-size: 1.1rem;
+  color: #2d140d;
+  padding: 4px 14px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.selector-container > button {
   color: white;
   background: #cf9775;
   font-size: 1.2rem;
-  border-radius: 100px 0 0 100px;
-  padding: 10px 15px;
+  padding: 5px 10px;
   border: none;
-  margin: 20px;
-}
-.minus {
-  border-radius: 100px 0 0 100px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
 }
 
-.plus {
-  border-radius: 0 100px 100px 0;
+.selector-container > button:first-child {
+  border-radius: 100px 0 0 100px;
+  padding-left: 12px;
 }
-.output {
-  padding: 4px 5px;
-  flex-grow: 1;
+
+.selector-container > button:last-child {
+  border-radius: 0 100px 100px 0;
+  padding-right: 12px;
+}
+
+.selector-container > button > svg {
+  fill: #fff;
 }
