@@ -1,9 +1,25 @@
-.btn {
-  color: white;
-  background: #cf9775;
-  font-size: 1.1rem;
-  border-radius: 28px;
-  padding: 16px 54px;
-  border: none;
-  box-shadow: 0 28px 40px #cf977570;
+.list {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background: #faf4ee;
+}
+
+.list > li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.item-icon {
+  flex-basis: 90px;
+}
+
+.item-more {
+  flex-basis: 20px;
+}
+
+.list > li > p {
+  flex-grow: 1;
 }
