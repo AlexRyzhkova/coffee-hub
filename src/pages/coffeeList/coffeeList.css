@@ -1,29 +1,18 @@
-/* .welcome-container {
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../../assets/bg.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.gridContainer {
+  display: grid;
+  grid-template-rows: 20px 3rem 1fr 3rem;
 }
 
-.welcome-container > img {
-  animation: fade 4s, zoom 3s ease-in-out;
+.topNavigation {
+  grid-row: 2 / 3;
+  background-color: hotpink;
 }
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.coffeeList {
+  grid-row: 3 / 4;
 }
-@keyframes zoom {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
+.bottomNavigation {
+  grid-row: 4 / 5;
+}
+.test {
+  background-color: indianred;
+}

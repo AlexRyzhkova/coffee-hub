@@ -1,9 +1,27 @@
-.btn {
-  color: white;
-  background: #cf9775;
-  font-size: 1.1rem;
-  border-radius: 28px;
-  padding: 16px 54px;
-  border: none;
-  box-shadow: 0 28px 40px #cf977570;
+.fullWidth {
+  width: 100vw;
+}
+
+.list {
+  width: 100%;
+  padding: 0;
+  align-items: center;
+}
+
+.list > li {
+  display: flex;
+  list-style-type: none;
+  padding: 10px 10px;
+}
+
+.item-icon {
+  flex-basis: 90px;
+}
+
+.item-more {
+  flex-basis: 20px;
+}
+
+.list > li > p {
+  flex-grow: 1;
 }
