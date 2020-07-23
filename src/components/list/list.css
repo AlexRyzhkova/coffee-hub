@@ -1,17 +1,16 @@
-/* .fullWidth {
+.fullWidth {
   width: 100vw;
-} */
+}
 
 .list {
   width: 100%;
   padding: 0;
-  background: #faf4ee;
+  align-items: center;
 }
 
 .list > li {
   display: flex;
-  list-style: none;
-  align-items: center;
+  list-style-type: none;
   padding: 10px 10px;
 }
 
