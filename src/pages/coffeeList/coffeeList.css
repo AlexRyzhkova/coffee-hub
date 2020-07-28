@@ -1,0 +1,20 @@
+.gridContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20px 3rem auto 92px;
+}
+
+.topNavigation {
+  grid-row: 2 / 3;
+}
+
+.intro {
+  grid-row: 2 / 3;
+}
+.coffeeList {
+  grid-row: 3 / 4;
+  overflow: auto;
+}
+.bottomNavigation {
+  grid-row: 4 / 5;
+}

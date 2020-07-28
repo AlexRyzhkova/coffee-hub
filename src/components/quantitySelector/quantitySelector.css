@@ -21,18 +21,25 @@
   display: flex;
   margin: 10px 0;
   align-items: center;
+  cursor: pointer;
 }
 
-.selector-container > button:first-child {
+.btn_minus {
   border-radius: 100px 0 0 100px;
   padding-left: 12px;
 }
 
-.selector-container > button:last-child {
+.btn_plus {
   border-radius: 0 100px 100px 0;
   padding-right: 12px;
 }
 
 .selector-container > button > svg {
   fill: #fff;
+}
+
+.btn_minus:disabled,
+.btn_plus:disabled {
+  background: grey;
+  cursor: auto;
 }
