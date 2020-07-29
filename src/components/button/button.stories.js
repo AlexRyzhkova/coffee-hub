@@ -1,20 +1,10 @@
 import { createButton } from "./button";
 import "./button.css";
 
+// Storybook
 export default { title: "Button" };
 
-// function createButton(buttonText) {
-//   const button = document.createElement("button");
-//   button.className = "btn";
-//   const text = document.createTextNode(buttonText);
-//   button.append(text);
-
-//   button.addEventListener("click", () => {
-//     alert("Hallo");
-//   });
-
-//   return button;
-
+// Storybook
 export const addToCart = () => {
   const button = createButton("Add to cart");
   return button;
