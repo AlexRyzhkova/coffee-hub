@@ -1,6 +1,11 @@
+import { createButton } from "./button";
 import "./button.css";
-import button from "./button.html";
 
+// Storybook
 export default { title: "Button" };
 
-export const addToCart = () => button;
+// Storybook
+export const addToCart = () => {
+  const button = createButton("Add to cart");
+  return button;
+};
