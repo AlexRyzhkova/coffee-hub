@@ -1,3 +1,4 @@
+import "./details.css";
 import { createButton } from "../../components/button/button";
 import { createElement } from "../../utils/element";
 import { createQuantitySelector } from "../../components/quantitySelector/quanttitySelector";
@@ -8,11 +9,11 @@ const createForm = () => {
   const price = createElement("div", { innerText: "$2.90" });
   coffeeName.append(price);
 
-  const coffeeSize = createElement("label", {});
+  const coffeeSize = createElement("label", { innerText: "Size" });
   const size = createElement("input");
   coffeeSize.append(size);
 
-  const coffeSugar = createElement("label", {});
+  const coffeSugar = createElement("label", { innerText: "Sugar" });
   const sugar = createElement("input", {});
   coffeSugar.append(sugar);
 
@@ -20,7 +21,7 @@ const createForm = () => {
 
   const button = createButton("Add to cart");
 
-  const form = createElement("main", {});
+  const form = createElement("form", { className: "details__form" });
 
   form.append(coffeeName);
   form.append(quantitySelector);
