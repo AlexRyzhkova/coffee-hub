@@ -3,20 +3,16 @@ import minusSrc from "../../assets/minus.svg";
 import plusSrc from "../../assets/plus.svg";
 
 export const createQuantitySelector = () => {
-  //   const qauntitySelector = document.createElement("div");
-  //   qauntitySelector.className = "quantitySelector";
   const quantitySelector = createElement("div", {
     className: "selector-container",
   });
 
   //  minus button
 
-  // const minusButton = document.createElement("button");
-  // minusButton.className = "btn-minus";
-  // minusButton.innerHTML = "-";
   const minusButton = createElement("button", {
     className: "btn_minus",
     disabled: true,
+    type: "button",
   });
 
   // Minus image
@@ -25,21 +21,19 @@ export const createQuantitySelector = () => {
   minusButton.append(minusImage);
 
   // Result
-
-  // const resultElement = document.creataElement("div");
-  // resultElement.className = "slector-result";
-  // resultElement.innerText = "1";
-  const resultElement = createElement("div", {
+  const resultElement = createElement("input", {
     className: "selector_result",
-    innerText: "1",
+    value: "1",
+    type: "number",
+    min: 1,
+    max: 9,
+    name: "quantity",
   });
 
   // plus button
-  // const plusButton = document.createElement("button");
-  // minusButton.className = "btn-plus";
-  // minusButton.innerHTML = "+";
   const plusButton = createElement("button", {
     className: "btn_plus",
+    type: "button",
   });
 
   //   plus image
@@ -54,21 +48,29 @@ export const createQuantitySelector = () => {
 
   // Add event listener
   minusButton.addEventListener("click", () => {
-    const oldResult = Number(resultElement.innerHTML);
+    const oldResult = Number(resultElement.value);
 
     if (oldResult === 2) {
       minusButton.disabled = true;
     }
-    resultElement.innerHTML = oldResult - 1;
+    // resultElement.innerHTML = oldResult - 1;
+    if (oldResult === 9) {
+      plusButton.disabled = false;
+    }
+    resultElement.value = oldResult - 1;
   });
 
   plusButton.addEventListener("click", () => {
-    const oldResult = Number(resultElement.innerHTML);
+    const oldResult = Number(resultElement.value);
 
     if (oldResult === 1) {
       minusButton.disabled = false;
     }
-    resultElement.innerHTML = oldResult + 1;
+    // resultElement.innerHTML = oldResult + 1;
+    if (oldResult === 8) {
+      plusButton.disabled = true;
+    }
+    resultElement.value = oldResult + 1;
   });
   return quantitySelector;
 };
