@@ -7,9 +7,16 @@
 .selector_result {
   font-size: 1.1rem;
   color: #2d140d;
-  padding: 4px 14px;
+  padding: 4px 6px;
   flex-grow: 1;
   text-align: center;
+  border: none;
+}
+
+.selector_result::-webkit-outer-spin-button,
+.selector_result::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .selector-container > button {
