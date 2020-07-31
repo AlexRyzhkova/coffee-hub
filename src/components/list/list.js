@@ -5,6 +5,7 @@ import cappuchinoSrc from "../../assets/cappuchino.svg";
 import macchiatoSrc from "../../assets/macchiato.svg";
 import mochaSrc from "../../assets/mocha.svg";
 import latteSrc from "../../assets/latte.svg";
+import arrowSrc from "../../assets/back.svg";
 
 export function createList() {
   const coffees = [
@@ -16,15 +17,22 @@ export function createList() {
   ];
 
   const list = createElement("ul");
+  list.className = "list";
 
   coffees.forEach((coffee) => {
-    const listItem = createElement("li", { innerText: coffee.name });
+    const listItem = createElement("li");
+    const coffeeImg = createElement("img", { src: coffee.imgSrc });
+    listItem.append(coffeeImg);
 
-    const img = createElement("img", {
-      src: coffee.imgSrc,
+    coffeeImg.className = coffee.imgClass;
+    const span = createElement("span", { innerText: coffee.name });
+    listItem.append(span);
+
+    const arrowIcon = createElement("img", {
+      src: arrowSrc,
     });
-    img.className = coffee.imgClass;
-    listItem.prepend(img);
+    listItem.append(arrowIcon);
+
     list.append(listItem);
   });
 
